@@ -1,5 +1,7 @@
 package VISTA;
 
+import CONTROLADOR.Reportes;
+
 public class MenuPrincipal {
 
     public void Menu() {
@@ -13,8 +15,9 @@ public class MenuPrincipal {
                                     2. Celulares.
                                     3. Clientes
                                     4. Ventas
-                                    5. Salir
-                                    """, 1, 5);
+                                    5. Reportes
+                                    6. Salir
+                                    """, 1, 6);
             switch (op) {
                 case 1:
                     MenuMarca m = new MenuMarca();
@@ -32,10 +35,16 @@ public class MenuPrincipal {
                     MenuVentas venta = new MenuVentas();
                     venta.Menu();
                     break;
+                    
                 case 5:
+                    Reportes repo = new Reportes();
+                    repo.alertaStockTxt();
+
+                    break;
+                case 6:
                     System.out.println("Gracias por usar nuestra aplicacion.");
                     break;
             }
-        } while (op != 5);
+        } while (op != 6);
     }
 }
