@@ -2,7 +2,7 @@ package tecnostore;
 
 import CONTROLADOR.Conexion;
 import VISTA.MenuPrincipal;
-
+import CONTROLADOR.ReporteFinancieroService;
 
 public class TecnoStore {
 
@@ -12,5 +12,9 @@ public class TecnoStore {
         
         MenuPrincipal mp = new MenuPrincipal();
         mp.Menu();
+        
+        ReporteFinancieroService r = new ReporteFinancieroService();
+        r.ReportedeIngresosMensualesporMarca();
+        
     }
 }
